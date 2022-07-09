@@ -345,8 +345,11 @@ figure:hover>figcaption {
   color: var(--light);
 }
 
-.font-red {
+.e-title {
   color: var(--red);
+  font-family: var(--yellowtail);
+  font-size: 8rem;
+  padding: .4rem;
 }
 
 .font-black {
@@ -647,7 +650,7 @@ figure:hover>figcaption {
 .header-button-title {
   border: solid 4px var(--red);
   color: #ebebeb;
-  background-color: var(--dark);
+  background-color: transparent;
   padding: .5rem 2rem;
   border-radius: 10px;
   margin-right: 1rem;
