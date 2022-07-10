@@ -345,12 +345,7 @@ figure:hover>figcaption {
   color: var(--light);
 }
 
-.e-title {
-  color: var(--red);
-  font-family: var(--yellowtail);
-  font-size: 8rem;
-  padding: .4rem;
-}
+
 
 .font-black {
   color: var(--dark);
@@ -521,7 +516,7 @@ figure:hover>figcaption {
   background-color: var(--dark);
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 2rem;
   align-items: center;
   font-size: 1.4rem;
   position: fixed;
@@ -646,14 +641,21 @@ figure:hover>figcaption {
   padding-left: 15rem;
   flex-direction: column;
 }
-
+.header-container-title p {
+  padding-right: 1rem;
+}
+.header-buttons{
+  display: flex;
+  gap: 1rem;
+}
 .header-button-title {
   border: solid 4px var(--red);
   color: #ebebeb;
   background-color: transparent;
   padding: .5rem 2rem;
   border-radius: 10px;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
+  margin: 1rem 0;
   font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
@@ -671,7 +673,12 @@ figure:hover>figcaption {
 .header-title {
   font-size: 5rem;
 }
-
+.header-title .e-title {
+  color: var(--red);
+  font-family: var(--yellowtail);
+  font-size: 5rem;
+  margin-right: .5rem;
+}
 .logo-header:hover {
   transition: all 0.3s;
 }
@@ -741,6 +748,7 @@ figure:hover>figcaption {
 }
 
 .coursesTitle {
+  color: var(--dark-light);
   text-align: center;
 }
 
@@ -818,8 +826,13 @@ figure:hover>figcaption {
 .carousel-fade {
   z-index: 0;
 }
-
+.carousel-buttons{
+  display: flex;
+  flex-direction:column;
+  gap: 2rem;
+}
 .btn-merch {
+  text-align: center;
   border: solid 4px var(--red);
   color: #ebebeb;
   background-color: var(--red);
@@ -1073,7 +1086,9 @@ svg {
 }
 
 .teachers-container {
+  max-width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -1407,7 +1422,7 @@ ul>li>a:hover {
   }
 
   .header-container-title {
-    padding-left: 5rem;
+    padding-left: 2rem;
   }
 }
 

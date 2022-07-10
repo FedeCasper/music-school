@@ -152,7 +152,7 @@
             <p>
               From beginners to advanced, easily find the courses that interest you, at any time to see where you are!
             </p>
-            <div>
+            <div class="header-buttons">
               <input
                 type="button"
                 value="About Us"
@@ -250,7 +250,7 @@
                   <div class="carrousel-container" id="bg-1">
                     <h2>Discover our merchandise</h2>
                     <h3>35% discount using mindhub brothers bank card</h3>
-                    <div class="mt-3">
+                    <div class="mt-3 carousel-buttons">
                       <a href="./merchandise.html" class="btn-merch"
                         >See promotions</a
                       >
@@ -264,7 +264,7 @@
                   <div class="carrousel-container">
                     <h2>Discover our merchandise</h2>
                     <h3>35% discount using mindhub brothers bank card</h3>
-                    <div class="mt-3">
+                    <div class="mt-3 carousel-buttons">
                       <a href="./merchandise.html" class="btn-merch"
                         >See promotions</a
                       >
@@ -278,7 +278,7 @@
                   <div class="carrousel-container">
                     <h2>Discover our merchandise</h2>
                     <h3>35% discount using mindhub brothers bank card</h3>
-                    <div class="mt-3">
+                    <div class="mt-3 carousel-buttons">
                       <a href="./merchandise.html" class="btn-merch"
                         >See promotions</a
                       >
@@ -358,6 +358,13 @@
           <!------------------ Main - Teachers Section ------------------>
           <section class="teachers hidden">
             <div class="teachers-container">
+              <div class="coursesTitle mt-3">
+                <h3 class="red">Our Teachers</h3>
+                <h2>Learn From The Best</h2>
+                <p>
+                  The emusic-school method
+                </p>
+              </div>
               <div v-for="teacher in teachers" class="card">
                 <img
                   v-if="teacher.lastName === 'Jordison'"
