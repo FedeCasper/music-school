@@ -66,7 +66,7 @@
                 >About us</a
               >
             </div>
-            <div v-if="!isLogin">
+            <div v-if="!isLogin" class="login-hamburger">
               <a href="./login.html" id="btn-login" class="btn-responsive-login">Login</a>
               <i class="fa-solid fa-bars responsive" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
             </div>
@@ -77,7 +77,7 @@
                 <!-- <img src="/assets/cart-01.png" /> -->
                 <a type="button" data-bs-toggle="offcanvas" href="#offcanvasRight" aria-controls="offcanvasExample">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="32"
-                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+                    height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#c3c3c3" fill="none" stroke-linecap="round"
                     stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="6" cy="19" r="2" />
@@ -357,14 +357,15 @@
 
           <!------------------ Main - Teachers Section ------------------>
           <section class="teachers hidden">
+            <div class="coursesTitle mt-3">
+              <h3 class="red">Our Teachers</h3>
+              <h2>Learn From The Best</h2>
+              <p>
+                The emusic-school method
+              </p>
+            </div>
             <div class="teachers-container">
-              <div class="coursesTitle mt-3">
-                <h3 class="red">Our Teachers</h3>
-                <h2>Learn From The Best</h2>
-                <p>
-                  The emusic-school method
-                </p>
-              </div>
+            
               <div v-for="teacher in teachers" class="card">
                 <img
                   v-if="teacher.lastName === 'Jordison'"
@@ -523,7 +524,7 @@
         </footer>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <div class="d-flex flex-column justify-content-center align-items-center">

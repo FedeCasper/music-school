@@ -9,7 +9,7 @@
 :root {
   --red: #ce0202;
   --light: #ebebeb;
-  --dark: #212121;
+  --dark: #1d1d1d;
   --dark-light: #414141;
   --smoke-color: #c3c3c3;
   --jost: 'Jost', sans-serif;
@@ -518,7 +518,7 @@ figure:hover>figcaption {
   justify-content: space-between;
   padding: 0.5rem 2rem;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: fixed;
   transition: all 0.3s ease;
   z-index: 1;
@@ -526,18 +526,28 @@ figure:hover>figcaption {
 
 .nav a,
 .offcanvas-body a {
-  color: var(--smoke-color);
+  color: var(--light);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.nav a:hover,
 .nav a:focus,
 .offcanvas-body a:hover,
 .offcanvas-body a:focus {
-  color: white;
+color: #FFFFFF;
 }
+.nav-button-container {
+  display: none;
 
+}
+@media screen and (min-width:845px){
+.nav-button-container {
+    display: block;
+}
+.nav .login-hamburger i{
+  display: none;
+}
+}
 .student-cart-container {
   display: flex;
   align-items: center;
@@ -548,7 +558,9 @@ figure:hover>figcaption {
   flex-direction: column;
   align-items: center;
   margin-right: 2rem;
+  height: 1.2rem;
 }
+
 
 .cart-amount {
   position: absolute;
@@ -562,14 +574,15 @@ figure:hover>figcaption {
   align-items: center;
   border-radius: 50px;
   background-color: #ce0202;
-  margin: 0 0 1rem 5px;
   top: 15px;
 }
 
 .underline-hover-effect {
   position: relative;
 }
-
+.underline-hover-effect:hover{
+  text-shadow: #FFF 0px 0px 4px, 2px 2px 2px rgba(206,206,206,0);
+}
 .underline-hover-effect::after {
   content: '';
   background-color: var(--red);
@@ -599,11 +612,13 @@ figure:hover>figcaption {
 
 #btn-login:hover {
   color: #ebebeb;
-  background-color: var(--dark);
+  background-color: transparent;
   border: solid 3px var(--red);
   padding: 0.5rem 3rem;
 }
-
+.btn-close{
+color: var(--red)!important;
+}
 .bg-hero {
   width: 100%;
   height: 100vh;
@@ -676,7 +691,7 @@ figure:hover>figcaption {
 .header-title .e-title {
   color: var(--red);
   font-family: var(--yellowtail);
-  font-size: 5rem;
+  font-size: 1.5em;
   margin-right: .5rem;
 }
 .logo-header:hover {
@@ -829,23 +844,29 @@ figure:hover>figcaption {
 .carousel-buttons{
   display: flex;
   flex-direction:column;
-  gap: 2rem;
+  gap: 4rem;
+}
+@media screen and (min-width:768px){
+  .carousel-buttons{
+    flex-direction: row;
+  }
 }
 .btn-merch {
   text-align: center;
-  border: solid 4px var(--red);
   color: #ebebeb;
   background-color: var(--red);
   padding: .5rem 2rem;
   border-radius: 10px;
   margin-right: 1rem;
   font-size: 1.5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
 
 .btn-merch:hover {
-  color: #ebebeb;
+  color: rgba(235, 235, 235, 0.9);
+  background-color: rgba(206, 2, 2, 0.9);
+  padding: .5rem 2rem;
 }
 
 
@@ -1002,16 +1023,24 @@ svg {
   background-color: #111;
 }
 
+
 .student {
-  width: 10rem;
+  --size-img: 10rem;
+  width: var(--size-img);
+  height: var(--size-img);
   margin-right: 2rem;
   border-radius: 50%;
   border: solid 3px var(--red);
-  height: 10rem;
   filter: grayscale(1);
   transition: all .4s;
 }
-
+@media screen and (min-width: 1006px){
+.student{
+  --size-img: 8rem;
+  width: var(--size-img);
+  height: var(--size-img);
+}
+}
 .student:hover,
 .student-selected {
   filter: none;
@@ -1081,6 +1110,7 @@ svg {
   max-height: fit-content;
   background-color: #ebe9e9;
   display: flex;
+   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -1088,7 +1118,6 @@ svg {
 .teachers-container {
   max-width: 100%;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -1390,9 +1419,9 @@ ul>li>a:hover {
   height: 100%;
 }
 
-.responsive {
+/* .responsive {
   display: none;
-}
+} */
 
 @media (max-width: 545px) {
   .container-footer-col-1 {
@@ -1454,12 +1483,6 @@ ul>li>a:hover {
   }
 }
 
-@media (max-width: 1035px) {
-  .nav-button-container {
-    display: none;
-
-  }
-}
 
 @media (max-width: 1227px) {
   .students {
@@ -1518,11 +1541,21 @@ ul>li>a:hover {
 }
 
 
+.offcanvas-header {
+  background-color: var(--red);
+  display: flex;
+  justify-content: end;
+}
+.offcanvas-header button{
+  margin: 2rem;
+  color: var(--dark);
+  font-size: 1.3rem;
+  font-weight: 900;
+}
 .offcanvas {
   background-color: #111;
   color: var(--light);
 }
-
 .offcanvas .table {
   color: var(--smoke-color);
 }
@@ -1558,7 +1591,9 @@ tr {
   background-color: rgb(37, 37, 37);
   transition: all 0.1s ease-in;
 }
-
+.offcanvas button{
+  color: var(--light);
+}
 .deletes {
   color: var(--red);
   cursor: pointer;
