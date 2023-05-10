@@ -90,7 +90,7 @@ public class ClientController {
         helper.setSubject(subject);
 
         content = content.replace("[[name]]",newClient.getFirstName() + " " +  " " + newClient.getLastName());
-        String verifyURL = "/activateClient.html?token=" + newClient.getToken();
+        String verifyURL = "music-school-production.up.railway.app/activateClient.html?token=" + newClient.getToken();
 
         content = content.replace("[[URL]]",verifyURL);
 
