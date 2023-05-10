@@ -34,7 +34,7 @@ Vue.createApp({
         })
         .catch(res => console.log(res.response.data,"error"))   
 
-    axios.get(`http://localhost:8080/api/courses`)
+    axios.get(`/api/courses`)
     .then(datos => {
          this.courses = datos.data.filter(course => course.teacher.email == this.teacher.email)
          this.filteredCourses = datos.data.filter(course => course.teacher.email == this.teacher.email)
@@ -46,7 +46,7 @@ Vue.createApp({
          }
 
     })
-    axios.get(`http://localhost:8080/api/merch`)
+    axios.get(`/api/merch`)
     .then(datos => {
          this.merchandises = datos.data
 

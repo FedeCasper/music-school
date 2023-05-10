@@ -123,7 +123,7 @@ Vue.createApp({
         },
 
        async payment(){
-            await axios.post(`https://homebakingmindhub.herokuapp.com/api/clients/cards/payments?thruDate=${this.date}`,{cardNumber:this.cardNumber,cvv:this.cvv,amountPayment:this.totalAmount,description:this.descripcion,name:this.name},{headers:{'Access-Control-Allow-Origin':'*'}})
+            await axios.post(`/api/clients/cards/payments?thruDate=${this.date}`,{cardNumber:this.cardNumber,cvv:this.cvv,amountPayment:this.totalAmount,description:this.descripcion,name:this.name},{headers:{'Access-Control-Allow-Origin':'*'}})
             .then(response => {
                 this.ticketCompra()
                 console.log(response.data);
