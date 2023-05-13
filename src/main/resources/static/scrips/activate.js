@@ -10,7 +10,7 @@ Vue.createApp({
             get: (searchParams, prop) => searchParams.get(prop),
         });
         let token = params.token;
-        axios.patch("/api/activateClient/" + token)
+        axios.patch("music-school-production.up.railway.app/api/activateClient/" + token)
 	},
 	
 
